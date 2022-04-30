@@ -1,0 +1,37 @@
+*,
+*::before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 67.5%;
+  font-family: sans-serif;
+}
+
+.container {
+    padding: 10rem; 
+    display: grid; 
+    grid-gap:1rem;
+    grid: 20rem / 20rem auto 20rem 20rem;
+    /* lets add a function to dsiplay columns  */
+    grid: 20rem / repeat(3, 20rem);
+    /* or some other variants */
+    grid: 20rem / repeat(6, 20rem);
+    grid: 20rem / repeat(2, 20rem) auto;
+    grid: 20rem / repeat(2, 20rem) auto repeat(3, 20rem);
+    grid: 20rem / repeat(6, auto);
+    grid: 20rem / repeat(3, auto 5rem);
+    /* lets try a new unit - fraction (fr)acting below like auto */
+    grid: 20rem / repeat(4, 1fr);
+    /* and here  it's like  one unit and then two units after each other */
+    grid: 20rem / repeat(3, 1fr 2fr);
+    grid: 20rem / repeat(2, 1fr 3fr);
+}
+
+.container > div {
+    background:  #373242;
+    color: #ffffff;
+    font-size:1rem;
+    text-align: center;
+    line-height: 20rem;
+}
